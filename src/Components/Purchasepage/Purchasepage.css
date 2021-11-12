@@ -1,0 +1,22 @@
+.purchasepa form{
+    display: flex;
+    flex-direction:column;
+    
+    justify-content: center;
+    align-items: center;
+
+}
+.purchasepa form input{
+    width:40% ;
+    margin-bottom: 10px;
+    height: 30px;
+}
+.purchasepa form textarea{
+    width: 40%;
+    margin-bottom: 10px;
+    height: 60px;
+}
+.purchasepa{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}

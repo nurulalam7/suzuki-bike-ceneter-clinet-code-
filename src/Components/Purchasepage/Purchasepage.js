@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import Useauth from '../../Hooks/Useauth';
+import './Purchasepage.css'
 
 const Purchasepage = () => {
 
@@ -56,7 +57,7 @@ const Purchasepage = () => {
 
 
                    </div>
-                   <div className=" col md-6">
+                   <div className="purchasepa col md-6">
                        <form onSubmit={handleSubmit(onSubmit)}>
                             <h2>please add a your information</h2>
                             <input value={user.displayName} {...register("displayName")}  />

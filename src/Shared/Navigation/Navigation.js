@@ -11,7 +11,7 @@ const Navigation = () => {
         <div className="navmain">
             <Navbar bg="light" expand="lg">
   <Container>
-    <Navbar.Brand href="#home">SUZUKI BIKE</Navbar.Brand>
+    <Navbar.Brand href="#home">SUZUKI BIKE CENTER</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
