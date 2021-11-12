@@ -1,0 +1,15 @@
+.foo{
+    background-color: black;
+    color: lightyellow;
+}
+.foo i{
+    height: 30px;
+    width: 20px;
+}
+.fooicon i{
+
+   margin-right: 30px;
+}
+.fooicon h2{
+    color: peru;
+}

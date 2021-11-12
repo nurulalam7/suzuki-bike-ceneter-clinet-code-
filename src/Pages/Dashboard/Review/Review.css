@@ -1,0 +1,22 @@
+.rev form{
+    display: flex;
+    flex-direction:column;
+    
+    justify-content: center;
+    align-items: center;
+
+}
+.rev form input{
+    width:40% ;
+    margin-bottom: 10px;
+    height: 30px;
+}
+.rev form textarea{
+    width: 40%;
+    margin-bottom: 10px;
+    height: 60px;
+}
+.rev{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}

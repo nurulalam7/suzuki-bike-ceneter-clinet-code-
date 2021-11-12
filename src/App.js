@@ -10,8 +10,13 @@ import Register from './Register/Register';
 import Authprovider from './Context/Authprovider/Authprovider';
 
 import Allbikes from './Components/Allbikes/Allbikes';
+
+
+import Purchasepage from './Components/Purchasepage/Purchasepage';
 import Privateroute from './Pages/Login/Privateroute/Privateroute';
-import Makeadmin from './Pages/Dashboard/Makeadmin';
+import Footer from './Components/Footer/Footer';
+import Addbikedata from './Pages/Addbikedata/Addbikedata';
+
 
 const App = () => {
   return (
@@ -37,15 +42,25 @@ const App = () => {
            <Register></Register>
             </Route>
 
+
             <Privateroute  path='/allbikes'>
              <Allbikes></Allbikes>
+             </Privateroute>
+           
+            
+            
+
+            <Privateroute path='/service/:id'>
+                 <Purchasepage></Purchasepage>
             </Privateroute>
 
             <Route  path='/dashboard'>
             <Dashboard></Dashboard>
             </Route>
            
+           
           </Switch>
+          <Footer></Footer>
         </Router>
       
        </Authprovider>

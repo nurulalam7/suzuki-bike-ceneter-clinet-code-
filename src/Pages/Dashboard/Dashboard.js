@@ -23,11 +23,12 @@ import Makeadmin from './Makeadmin';
 import {Link} from 'react-router-dom'
 import Addnewbike from './Addnewbike/Addnewbike';
 import Manageallbike from './Manageallbike/Manageallbike';
-import Manageorder from './Manageorder/Manageorder';
+
 import Logout from './Logout/Logout';
 import Payment from './Payment/Payment';
 import Myorder from './Myorder/Myorder';
 import Review from './Review/Review';
+import Manageproducts from '../Manageproduct/Manageproducts';
 
 
 
@@ -58,8 +59,9 @@ function Dashboard(props) {
       
       <Link to={`${url}/makeadmin`}><Button>make admin</Button></Link>
       <Link to={`${url}/addnewbike`}><Button>add new bike</Button></Link>
-      <Link to={`${url}/manageallbike`}><Button>manage all bike</Button></Link>
-      <Link to={`${url}/manageorders`}><Button>manage orders</Button></Link>
+      <Link to={`${url}/manageorder`}><Button>manage order</Button></Link>
+      <Link to={`${url}/manageproducts`}><Button>manage products</Button></Link>
+    
       <Link to={`${url}/logout`}><Button>logout</Button></Link>
 
       {/* for normal user  */}
@@ -158,12 +160,14 @@ function Dashboard(props) {
         <Route path={`${path}/addnewbike`}>
          <Addnewbike></Addnewbike>
         </Route>
-        <Route path={`${path}/manageallbike`}>
+        <Route path={`${path}/manageorder`}>
          <Manageallbike></Manageallbike>
         </Route>
-        <Route path={`${path}/manageorders`}>
-          <Manageorder></Manageorder>
+        <Route path={`${path}/manageproducts`}>
+         <Manageproducts></Manageproducts>
         </Route>
+       
+        
         <Route path={`${path}/logout`}>
           <Logout></Logout>
         </Route>

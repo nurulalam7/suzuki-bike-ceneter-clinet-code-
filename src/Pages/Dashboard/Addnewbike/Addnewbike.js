@@ -1,13 +1,14 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
 import './Addnewbike.css'
+import axios from 'axios';
 
 const Addnewbike = () => {
 
     const { register, handleSubmit ,reset} = useForm();
     const onSubmit = data =>{
         console.log(data);
-        fetch('http://localhost:5000/services',data)
+        axios.post('http://localhost:5000/services',data)
 
         .then(res=> {
             if(res.data.insertedId){

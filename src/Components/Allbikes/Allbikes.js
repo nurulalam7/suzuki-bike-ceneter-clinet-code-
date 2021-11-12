@@ -1,9 +1,10 @@
 import React from 'react'
+import Allbikesdata from './Allbikesdata/Allbikesdata'
 
 const Allbikes = () => {
     return (
         <div>
-            <h3>thiis is all bikes</h3>
+            <Allbikesdata></Allbikesdata>
         </div>
     )
 }
