@@ -16,7 +16,7 @@ const Navigation = () => {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
         <NavLink to="/home">Home</NavLink>
-        <NavLink to="/allbikes">all bikes</NavLink>
+        <NavLink to="/allbikes">explore</NavLink>
        
        
 

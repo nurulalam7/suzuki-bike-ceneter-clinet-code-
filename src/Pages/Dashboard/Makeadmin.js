@@ -1,17 +1,18 @@
-import { TextField,Button } from '@mui/material';
+import { TextField,Button, Alert } from '@mui/material';
 
 import React, { useState } from 'react'
 
 const Makeadmin = () => {
     const [email,setemail]=useState('');
+    const [success,setsuccess]=useState(false);
 
     const handelonblur=e =>{
         setemail(e.target.value);
     }
 
     const handleadminsubmit=e =>{
-        const user={email};
-        fetch('http://localhost:5000/users/makeadmin',{
+       const user={email};
+        fetch('http://localhost:5000/users/admin',{
         method:'PUT',
         headers:{
             'content-type':'application/json'
@@ -20,7 +21,14 @@ const Makeadmin = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            console.log(data);
+            if(data.modifiedCount){
+
+                console.log(data);
+                setemail('');
+                setsuccess(true);
+
+            }
+            
         })
         e.preventDefault();
 
@@ -32,14 +40,17 @@ const Makeadmin = () => {
             <h3> make an admin</h3>
             <form onSubmit={handleadminsubmit}>
             <TextField 
-            id="standard-basic" 
-            label="Standard" 
+           sx={{ width:'50%'}}
+            label="Email" 
             type='email'
             onBlur={handelonblur}
             variant="standard" />
             <Button type="submit" variant='contained'>make admin</Button>
 
             </form>
+            {
+           success &&  <Alert severity="success"> make admin successfully </Alert>
+       }
         </div>
     )
 }

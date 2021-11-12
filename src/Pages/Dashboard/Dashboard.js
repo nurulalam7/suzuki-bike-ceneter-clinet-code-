@@ -29,6 +29,7 @@ import Payment from './Payment/Payment';
 import Myorder from './Myorder/Myorder';
 import Review from './Review/Review';
 import Manageproducts from '../Manageproduct/Manageproducts';
+import Useauth from '../../Hooks/Useauth';
 
 
 
@@ -40,9 +41,8 @@ const drawerWidth = 200;
 function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  
-
   let { path, url } = useRouteMatch();
+  const{user,admin,logout}=Useauth();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -57,18 +57,33 @@ function Dashboard(props) {
       <Link to={`${url}`}><Button>dashboard</Button></Link>
 
       
-      <Link to={`${url}/makeadmin`}><Button>make admin</Button></Link>
-      <Link to={`${url}/addnewbike`}><Button>add new bike</Button></Link>
-      <Link to={`${url}/manageorder`}><Button>manage order</Button></Link>
-      <Link to={`${url}/manageproducts`}><Button>manage products</Button></Link>
-    
-      <Link to={`${url}/logout`}><Button>logout</Button></Link>
+      {admin && <>
+          <Link to={`${url}/makeadmin`}><Button>make admin</Button></Link>
+          <Link to={`${url}/addnewbike`}><Button>add new bike</Button></Link>
+          <Link to={`${url}/manageorder`}><Button>manage order</Button></Link>
+          <Link to={`${url}/manageproducts`}><Button>manage products</Button></Link>
+         <Button onClick={logout}>logout</Button>
+        
+
+      </>
+      }
+
+      
+     {
+       !admin && <>
+        <Link to={`${url}/review`}><Button>review</Button></Link>
+      <Link to={`${url}/payment`}><Button>payment</Button></Link>
+      <Link to={`${url}/myorder`}><Button>my order</Button></Link>
+      <Button onClick={logout}>logout</Button>
+       </>
+     }
+
+
+     
 
       {/* for normal user  */}
 
-      <Link to={`${url}/payment`}><Button>payment</Button></Link>
-      <Link to={`${url}/myorder`}><Button>my order</Button></Link>
-      <Link to={`${url}/review`}><Button>review</Button></Link>
+     
       
       <List>
         {['payment', 'myorder', 'review', 'logout'].map((text, index) => (
