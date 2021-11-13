@@ -36,6 +36,7 @@ import Useauth from '../../Hooks/Useauth';
 
 
 
+
 const drawerWidth = 200;
 
 function Dashboard(props) {
@@ -53,7 +54,7 @@ function Dashboard(props) {
       <Divider />
 
       {/* for admin  */}
-      <Link to='/adminpanel'><Button>go home page</Button></Link>
+      <Link to='/home'><Button>back to home</Button></Link>
       <Link to={`${url}`}><Button>dashboard</Button></Link>
 
       

@@ -16,6 +16,7 @@ import Purchasepage from './Components/Purchasepage/Purchasepage';
 import Privateroute from './Pages/Login/Privateroute/Privateroute';
 import Footer from './Components/Footer/Footer';
 import Addbikedata from './Pages/Addbikedata/Addbikedata';
+import Pagenotfund from './Components/Home/Pagenotfound/Pagenotfund';
 
 
 const App = () => {
@@ -56,6 +57,9 @@ const App = () => {
 
             <Route  path='/dashboard'>
             <Dashboard></Dashboard>
+            </Route>
+            <Route  path=''>
+           <Pagenotfund></Pagenotfund>
             </Route>
            
            
