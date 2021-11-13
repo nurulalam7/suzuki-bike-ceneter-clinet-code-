@@ -10,6 +10,9 @@ const Makeadmin = () => {
         setemail(e.target.value);
     }
 
+
+
+
     const handleadminsubmit=e =>{
        const user={email};
         fetch('https://serene-island-58723.herokuapp.com/users/admin',{
