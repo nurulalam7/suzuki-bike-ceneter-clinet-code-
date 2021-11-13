@@ -12,7 +12,7 @@ const Makeadmin = () => {
 
     const handleadminsubmit=e =>{
        const user={email};
-        fetch('http://localhost:5000/users/admin',{
+        fetch('https://serene-island-58723.herokuapp.com/users/admin',{
         method:'PUT',
         headers:{
             'content-type':'application/json'

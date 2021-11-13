@@ -16,7 +16,7 @@ const Purchasepage = () => {
         data.approved=false;
         data.price=singleservice.price;
 
-       fetch('http://localhost:5000/orders',{
+       fetch('https://serene-island-58723.herokuapp.com/orders',{
            method:'POST',
            headers:{
                'content-type': 'application/json'
@@ -40,7 +40,7 @@ const Purchasepage = () => {
     const {id}=useParams();
     const [singleservice,setsingleservice]=useState({});
     useEffect(()=>{
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://serene-island-58723.herokuapp.com/services/${id}`)
         .then(res=>res.json())
         .then(data=>setsingleservice(data));
     },[])

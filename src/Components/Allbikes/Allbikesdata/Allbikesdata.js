@@ -6,7 +6,7 @@ import './Allbikesdata.css'
 const Allbikesdata = () => {
     const [services,setservice]=useState([]);
     useEffect(()=>{
-       fetch('http://localhost:5000/services')
+       fetch('https://serene-island-58723.herokuapp.com/services')
        .then(res=>res.json())
        .then(data=>setservice(data));
     },[])

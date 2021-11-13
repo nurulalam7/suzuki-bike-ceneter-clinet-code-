@@ -11,7 +11,7 @@ const Manageproductinfo = ({service}) => {
     const handledeleteuser = id=>{
         const proced=window.confirm('are you sure ,you want to delete');
         if(proced){
-            const url=`http://localhost:5000/services/${id}`;
+            const url=`https://serene-island-58723.herokuapp.com/services/${id}`;
             fetch (url,{
                 method:'DELETE',
             })

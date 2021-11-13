@@ -5,7 +5,7 @@ const Manageallbike = () => {
     const {user}=Useauth();
     const [orders,setorders]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/orders')
+        fetch('https://serene-island-58723.herokuapp.com/orders')
         .then(res=>res.json())
         .then(data=>setorders(data));
 
@@ -14,7 +14,7 @@ const Manageallbike = () => {
     const handledeleteuser = id=>{
         const proced=window.confirm('are you sure ,you want to delete');
         if(proced){
-            const url=`http://localhost:5000/orders/${id}`;
+            const url=`https://serene-island-58723.herokuapp.com/orders/${id}`;
             fetch (url,{
                 method:'DELETE',
             })
@@ -35,7 +35,7 @@ const Manageallbike = () => {
     }
 
     const handleupdatedinfo= (id)=>{
-        fetch(`http://localhost:5000/orders/${id}`,{
+        fetch(`https://serene-island-58723.herokuapp.com/orders/${id}`,{
             method:'PUT',
 
         })

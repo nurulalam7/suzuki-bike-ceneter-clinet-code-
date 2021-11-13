@@ -96,7 +96,7 @@ const Usefirebase = () => {
     },[])
 
     useEffect(()=>{
-      fetch(`http://localhost:5000/users/${user.email}`)
+      fetch(`https://serene-island-58723.herokuapp.com/users/${user.email}`)
       .then(res=>res.json())
       .then(data =>setadmin(data.admin))
 
@@ -114,7 +114,7 @@ const Usefirebase = () => {
 
     const saveuser=(email,displayName)=>{
       const user={email,displayName};
-      fetch('http://localhost:5000/users',{
+      fetch('https://serene-island-58723.herokuapp.com/users',{
         method:'POST',
         headers:{
           'content-type':'application/json'

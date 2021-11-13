@@ -7,7 +7,7 @@ import './Reviewadd.css'
 const Reviewadddata = () => {
     const [reviews,setreviews]=useState([]);
     useEffect(()=>{
-       fetch('http://localhost:5000/review')
+       fetch('https://serene-island-58723.herokuapp.com/review')
        .then(res=>res.json())
        .then(data=>setreviews(data));
     },[])
